@@ -382,7 +382,7 @@ Rectangle {
                                 //     Wants to Run
                                 onDoubleClicked: {
                                     console.debug("Application To Run = " + appName);
-                                    processExecute.RunSimpleProcess(appName);
+                                    procExec.RunSimpleProcess(appName);
                                 }
                             }
                             // States of this Item:
