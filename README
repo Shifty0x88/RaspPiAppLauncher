@@ -1,2 +1,10 @@
 RaspberryPi Application Launcher -- Qt Quick 1.1 Application
 
+Provides a Tabbed Interface to Launch Applications From. 
+    Note: Currently this is Limitied to 1 Application 
+          at a time -- something to fix already =D
+
+The Applications are arranged on each Tab page in a Grid, and 
+    Provide a Title, Icon Image and Description.  The First
+    Few Lines of the Description are always visible with the
+    lower portion becoming visible after the user clicks on it.
