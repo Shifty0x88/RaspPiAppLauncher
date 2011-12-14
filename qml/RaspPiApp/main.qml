@@ -62,6 +62,33 @@ Rectangle {
                             borderColor: "black"
                             borderWidth: 1
                         }
+                        ListElement {
+                            colorName: "lightsteelblue"
+                            appTitle: "Chromium"
+                            appName: "firefox"
+                            blurb: "blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
+                            iconImg: "image/qt-logo.png"
+                            borderColor: "black"
+                            borderWidth: 1
+                        }
+                        ListElement {
+                            colorName: "lightsteelblue"
+                            appTitle: "Chromium"
+                            appName: "firefox"
+                            blurb: "blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
+                            iconImg: "image/qt-logo.png"
+                            borderColor: "black"
+                            borderWidth: 1
+                        }
+                        ListElement {
+                            colorName: "lightsteelblue"
+                            appTitle: "Chromium"
+                            appName: "firefox"
+                            blurb: "blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
+                            iconImg: "image/qt-logo.png"
+                            borderColor: "black"
+                            borderWidth: 1
+                        }
 
                     }
                     // Handle Clicks on the Area that is Not Part of the Item
