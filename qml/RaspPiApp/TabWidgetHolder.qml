@@ -26,7 +26,7 @@ TabWidget {
                     // Title of the Application
                     appTitle: "RaspPi Quick Start"
 
-                    // This is What Cctually gets Launched!!!
+                    // This is What Actually gets Launched!!!
                     appName: "firefox http://www.raspberrypi.org/"
 
                     // Blurb about the Program
