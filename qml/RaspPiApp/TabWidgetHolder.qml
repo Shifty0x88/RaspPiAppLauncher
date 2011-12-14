@@ -22,6 +22,7 @@ TabWidget {
                 id: quickAppItemModel
 
                 ListElement {
+                    // Background Color
                     colorName: "red"
                     // Title of the Application
                     appTitle: "RaspPi Quick Start"
