@@ -131,3 +131,5 @@ export (TARGET.CAPABILITY)
 export (LIBS)
 export (QMAKE_EXTRA_TARGETS)
 }
+
+OTHER_FILES +=

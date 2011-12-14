@@ -1,68 +1,43 @@
 import QtQuick 1.1
 
 Item {
-    id: appContainer
+    id: quickAppContainer
     // Debug: Currently Expanded(Selected but Not Launched) Application
     property string appToRun:  "NoApp"
     // Debug String for What Application the User Has Selected to Expand,
     //     and View More Information About.  Useful for Usage Statistics
     //onAppToRunChanged: console.debug("Program Selected: appToRun = " + appToRun);
-    ListModel {
-        id: itemModel
-
-        ListElement {
-            colorName: "blue"
-            appTitle: "RaspPi Quick Start"
-            appName: "firefox http://www.raspberrypi.org/"
-            blurb: "blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
-            iconImg: "image/90px-Raspberry_Pi_Logo.png"
-            borderColor: "black"
-            borderWidth: 1
-        }
-        ListElement {
-            colorName: "red"
-            appTitle: "Mozilla Firefox"
-            appName: "firefox"
-            blurb: "blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
-            iconImg: "image/qt-logo.png"
-            borderColor: "black"
-            borderWidth: 1
-        }
-
-    }
+    anchors.fill: parent;
     // Handle Clicks on the Area that is Not Part of the Item
     //     Currently Selected
     MouseArea {
         anchors.fill: parent
-        onClicked: grid.currentIndex = -1
+        onClicked: quickAppGrid.currentIndex = -1
     }
-
-    // Font for the Text Blurb for Each Application
-    //     Number of Lines of Text Increases if the User Clicks on
-    //     that individual Application.
-    FontLoader{
-        id: blurbFont
-        name: "Courier"
-    }
-    // Font for the Title
-    FontLoader{
-        id: titleFont
-        name: "Helvetica"
-    }
-
     // Our Delegate to the Grid
     Component {
-        id: rectDelegate
-
+        id: quickAppDelegate
         // This is Our Grid Item
         Rectangle {
             id: rect
+
+            color: colorName
             width: 150
             height: 200
-            color: colorName
-
             border.color: borderColor
             border.width: borderWidth
+            // Font for the Text Blurb for Each Application
+            //     Number of Lines of Text Increases if the User Clicks on
+            //     that individual Application.
+            FontLoader{
+                id: blurbFont
+                name: "Courier"
+            }
+            // Font for the Title
+            FontLoader{
+                id: titleFont
+                name: "Helvetica"
+            }
             // We Use this to Force the One that the User has Selected to Draw
             //      On Top of the Other Ones in the Grid, So we can Expand
             //      the Description of the Program as Well
@@ -126,7 +101,7 @@ Item {
                 anchors.fill: parent
                 // Change the Current Index Selected, so we can
                 //     Expand the Description
-                onClicked: grid.currentIndex = index
+                onClicked: quickAppGrid.currentIndex = index
                 // On Double Click, Launch the Application that the User
                 //     Wants to Run
                 onDoubleClicked: {
@@ -141,7 +116,7 @@ Item {
                 // Happens when the User Clicks off of this Item
                 State {
                     name: "none"
-                    when: (grid.currentIndex == -1)
+                    when: (quickAppGrid.currentIndex == -1)
                     // Change the Maximum Number of Lines
                     PropertyChanges {
                         target: myBlurb
@@ -198,29 +173,22 @@ Item {
     }
 
     GridView {
-        id: grid
-        width: 600; height: 600
-        cellWidth: 175; cellHeight: 225
-        //x:  25; y:  25
-        model: itemModel
-        delegate: rectDelegate
+        id: quickAppGrid
+        anchors.fill:  parent;
+        // Figure out a way to get the width and height of the item without hardcoding it
+        cellWidth: 175; cellHeight: 225; // width+25, height+25
+        model: quickAppItemModel
+        delegate: quickAppDelegate
 
         // handle clicks on empty area within the grid.
         // this adds an element below the grid items but on the grid's flickable surface
         //     (so it won't have mouse events stolen by the grid)
         flickableChildren: MouseArea {
             anchors.fill: parent
-            onClicked: grid.currentIndex = -1
+            onClicked: quickAppGrid.currentIndex = -1
         }
         // sets the initial index to -1, so no item is selected
         //        currentIndex: -1 // not enough, need to check later
         Component.onCompleted: currentIndex = -1
     }
-}
-
-
-
-
-
-
 }
