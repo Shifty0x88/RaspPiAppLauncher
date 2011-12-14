@@ -22,12 +22,9 @@ Item {
     WorkAppGrid {
         id: workAppGrid
         anchors.fill:  parent;
-        // Figure out a way to get the width and height of the item without hardcoding it
-        cellWidth: 175; cellHeight: 225; // width+25, height+25
+
         model: workAppItemModel
         delegate: workAppDelegate
-
-
     }
 }
 

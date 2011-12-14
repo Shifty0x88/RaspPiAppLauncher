@@ -20,8 +20,5 @@ Item {
 
     QuickAppGrid {
         id: quickAppGrid
-
-        model: quickAppItemModel
-        delegate: quickAppDelegate
     }
 }

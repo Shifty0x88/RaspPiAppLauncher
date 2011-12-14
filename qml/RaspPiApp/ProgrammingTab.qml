@@ -20,12 +20,7 @@ Item {
 
     ProgrammingGrid {
         id: programmingGrid;
-        anchors.fill: parent
-        // Figure out how to find the cell width and height programatically
-        cellWidth: 175; cellHeight: 225
 
-        model: programmingItemModel
-        delegate: programmingDelegate
     }
 
 }

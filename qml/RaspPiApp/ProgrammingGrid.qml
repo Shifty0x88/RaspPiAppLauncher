@@ -1,6 +1,12 @@
 import QtQuick 1.1
 
 GridView {
+    anchors.fill: parent
+
+    model: programmingItemModel
+    delegate: programmingDelegate
+
+    cellWidth: 175; cellHeight: 250;
     // handle clicks on empty area within the grid.
     // this adds an element below the grid items but on the grid's flickable surface
     //     (so it won't have mouse events stolen by the grid)
