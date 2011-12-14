@@ -1,7 +1,7 @@
 import QtQuick 1.1
 
 Item {
-    id: workAppContainer
+    id: quickAppContainer
     // Debug: Currently Expanded(Selected but Not Launched) Application
     property string appToRun:  "NoApp"
     // Debug String for What Application the User Has Selected to Expand,
@@ -12,22 +12,16 @@ Item {
     //     Currently Selected
     MouseArea {
         anchors.fill: parent
-        onClicked: workAppGrid.currentIndex = -1
+        onClicked: quickAppGrid.currentIndex = -1
+    }
+    QuickAppDelegate {
+        id: quickAppDelegate
     }
 
-    WorkAppDelegate {
-        id: workAppDelegate
-    }
+    QuickAppGrid {
+        id: quickAppGrid
 
-    WorkAppGrid {
-        id: workAppGrid
-        anchors.fill:  parent;
-        // Figure out a way to get the width and height of the item without hardcoding it
-        cellWidth: 175; cellHeight: 225; // width+25, height+25
-        model: workAppItemModel
-        delegate: workAppDelegate
-
-
+        model: quickAppItemModel
+        delegate: quickAppDelegate
     }
 }
-
