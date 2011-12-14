@@ -6,6 +6,8 @@
 #include <QProcess>
 
 
+// Suggestion: Add more code here to make it so that I can Run more
+//     than 1 Process at a Time!  STL Vectors might make this easier
 class ProcExec : public QObject
 {
     Q_OBJECT
@@ -111,8 +113,10 @@ private:
         qDebug() << "QProcess Error String = " << process.errorString();
     }
 
-    // Process to hold the
+    // Holds the Running Process
     QProcess* proc;
+    // Suggestion: Add more code here to make it so that I can Run more
+    //     than 1 Process at a Time!  STL Vectors might make this easier
 };
 
 #endif // MYCLASS_H
