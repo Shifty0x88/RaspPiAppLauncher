@@ -4,7 +4,6 @@ Rectangle {
     id: root
     // Figure out a way to get this to auto-expand and contract as the
     //     User Maximizes/Minimizes/Re-Sizes the Application
-    //width:  530; height: 650;
     width:  600; height: 650;
     // Background Color, Border Color and Width
     anchors.fill:  parent
@@ -13,7 +12,7 @@ Rectangle {
     Image {
         id: raspPiLogoImg
         width: 45; height: 45; x: 0; y: 5;
-        // Yey! For Transparent Background Icon Image!! Thank to Liam! =D
+        // Yey! For Transparent Background Icon Image!! Thanks to Liam! =D
         source: "image/RaspPi_PNG45x40.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -32,8 +31,6 @@ Rectangle {
         anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
         anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
         anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
-
-
 
         // Quick Application Tab Page
         QuickAppTab {
