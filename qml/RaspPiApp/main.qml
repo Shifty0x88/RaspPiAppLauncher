@@ -20,8 +20,8 @@ Rectangle {
     //     User Maximizes/Minimizes/Re-Sizes the Application
     width:  600; height: 650;
     // Background Color, Border Color and Width
-    anchors.fill:  parent
     color: "lightsteelblue"; border.width: 5; border.color: "black"
+
     // Raspberry Pi Logo!!!!!!!! Love the Raspberry Pi!!!!
     Image {
         id: raspPiLogoImg
