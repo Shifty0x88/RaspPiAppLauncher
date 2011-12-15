@@ -22,13 +22,14 @@ Notes about Limitations of the Software in it's Current State:
        pretty cut and paste to fix that! =D (Sorry, Couldn't Resist!)
     4. Paths to Icons are Hardcoded to Ubuntu 11.10 on x86. Will
        Change to Default Location and Images on Release
-    5. There's more but I can't think of it
+    5. Text blurb can and will get cut off if it cannot fit height-wise
+    6. There's more but I can't think of it
 
 
 Notes about the Future:
     1. Transitions might need to be removed for performance on
        the actual hardware.
-    2. QProcess would need to be implimented or we can use
+    2. QProcess would need to be implemented or we can use
        rewrite it using basic linux sys calls. QProcess is just
        an abstraction. I'm assuming it will exist since we are
        suppose to get Qt5 for the RaspberryPi.

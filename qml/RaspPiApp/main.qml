@@ -4,7 +4,7 @@ Rectangle {
     id: root
     // Figure out a way to get this to auto-expand and contract as the
     //     User Maximizes/Minimizes/Re-Sizes the Application
-    width:  700; height: 700;
+    width:  600; height: 650;
     // Background Color, Border Color and Width
     color: "lightsteelblue"; border.width: 5; border.color: "black"
     // Raspberry Pi Logo!!!!!!!! Love the Raspberry Pi!!!!
@@ -83,7 +83,7 @@ Rectangle {
                         appTitle: "Gnome Terminal"
                         appName: "gnome-terminal"
                         blurb: "Simple GUI Shell.\n Great for command-line uses"
-                        iconImg: "/usr/share/app-install/terminal-tango.png"
+                        iconImg: "/usr/share/app-install/icons/terminal-tango.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
@@ -93,7 +93,7 @@ Rectangle {
                         appTitle: "GEdit"
                         appName: "gedit"
                         blurb: "Simple GUI Text Editor.\n Great for Quick Edits, Testing and All-Around Text Editor"
-                        iconImg: "image/RaspPi_PNG90x80.png"
+                        iconImg: "/usr/share/app-install/icons/accessories-text-editor.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
@@ -199,11 +199,11 @@ Rectangle {
 
                     ListElement {
                         colorName: "lightsteelblue"
-                        appTitle: "Gedit"
+                        appTitle: "GEdit"
                         // This is what actually gets launched:
                         appName: "gedit"
                         blurb: "Simple GUI Text Editor\n\n GEdit is a lightweight Text Editor"
-                        iconImg: "image/RaspPi_PNG90x80.png"
+                        iconImg: "/usr/share/app-install/icons/accessories-text-editor.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
@@ -212,7 +212,7 @@ Rectangle {
                         appTitle: "Gnome Terminal"
                         appName: "gnome-terminal"
                         blurb: "Simple GUI Shell\n\n Great for command-line uses"
-                        iconImg: "/usr/share/app-install/terminal-tango.png"
+                        iconImg: "/usr/share/app-install/icons/terminal-tango.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
