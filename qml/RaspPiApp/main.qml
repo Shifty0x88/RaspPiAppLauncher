@@ -1,5 +1,19 @@
-import QtQuick 1.1 // needed for Text.maximumLineCount
+/******************************************************************
+ *                                                                *
+ * Raspberry Pi Qt Quick Application Launcher                     *
+ *     Presents the User with a Tabbed Window View which Holds    *
+ *     Grids of Application to Launch on the System.              *
+ *                                                                *
+ * See README for More Information about the Limitations/Future   *
+ *                                                                *
+ *                                                                *
+ * Created By: Rob Roche <shiftyx0(at)gmail.com>                  *
+ *                                                                *
+ ******************************************************************/
 
+import QtQuick 1.1   // Needed for Text.maximumLineCount
+
+// Holds our RaspberryPi Application Launcher Qt Quick Program
 Rectangle {
     id: root
     // Figure out a way to get this to auto-expand and contract as the
@@ -27,6 +41,7 @@ Rectangle {
     // Tab Widget, Holds the Tab Pages in the Application
     TabWidget {
         // Put this Under the Raspberry Pi Logo, but Expand to the Entire Window Width
+        //     and What is Left of the Window Height
         anchors.top: raspPiLogoImg.bottom;
         anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
         anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
@@ -36,9 +51,9 @@ Rectangle {
         QuickAppTab {
             id: quickAppTab
             property string title: "Quick Start Apps"
-            anchors.horizontalCenter:  parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
-            // This is all of the Applications to be Shown on the Quick App Tab Page
+
+            // This is all of the Applications to be Shown on the
+            //     Quick App Tab Page
             ListModel {
                 id: quickAppItemModel
                 // Firefox - To Web Link: http://raspberrypi.org/
@@ -114,6 +129,7 @@ Rectangle {
         ProgrammingTab {
             id: programmingTab
             property string title: "Programming"
+
             // This is the Items that we Want to Display
             //     on the Programming Tab Page
             ListModel {
@@ -192,7 +208,11 @@ Rectangle {
         // Work Applications' Tab Page
         // Work App Tab Page
         WorkAppTab {
+            id: workAppTab
             property string title: "Work Apps"
+
+            // This is the Items that we Want to Display
+            //     on the Work Applications Tab Page
             ListModel {
                 id: workAppItemModel
                 // GEdit
