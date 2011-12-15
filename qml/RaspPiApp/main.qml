@@ -4,7 +4,7 @@ Rectangle {
     id: root
     // Figure out a way to get this to auto-expand and contract as the
     //     User Maximizes/Minimizes/Re-Sizes the Application
-    width:  600; height: 650;
+    width:  530; height: 650;
     // Background Color, Border Color and Width
     color: "lightsteelblue"; border.width: 5; border.color: "black"
     // Raspberry Pi Logo!!!!!!!! Love the Raspberry Pi!!!!
@@ -30,15 +30,13 @@ Rectangle {
         anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
         anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
         anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
-
-        anchors.onFillChanged: console.debug("tabwidget - fill changed")
-
+        // Quick Application Tab Page
         QuickAppTab {
             id: quickAppTab
             property string title: "Quick Start Apps"
             anchors.horizontalCenter:  parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            // This is all of the Apllications to be Shown on the Quick App Tab Page
+            // This is all of the Applications to be Shown on the Quick App Tab Page
             ListModel {
                 id: quickAppItemModel
 
