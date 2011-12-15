@@ -53,7 +53,6 @@ Item {
 
     onCurrentChanged: setOpacities()
     Component.onCompleted: setOpacities()
-
     function setOpacities() {
         for (var i = 0; i < stack.children.length; ++i) {
             stack.children[i].opacity = (i == current ? 1 : 0)
@@ -62,7 +61,7 @@ Item {
 
     Row {
         id: header
-
+        anchors.horizontalCenter: parent.horizontalCenter
         Repeater {
             model: stack.children.length
             delegate: Rectangle {
