@@ -95,65 +95,67 @@ Component {
                 processExecute.RunSimpleProcess(appName);
             }
         }
-        // States of this Item:
-        //     Keeps Track if this Item has Been Selected By
-        //     the User or Not
-        states: [
-            // Happens when the User Clicks off of this Item
-            State {
-                name: "none"
-                when: (programmingGrid.currentIndex == -1)
-                // Change the Maximum Number of Lines
-                PropertyChanges {
+        StateGroup {
+            // States of this Item:
+            //     Keeps Track if this Item has Been Selected By
+            //     the User or Not
+            states: [
+                // Happens when the User Clicks off of this Item
+                State {
+                    name: "none"
+                    when: (programmingGrid.currentIndex == -1)
+                    // Change the Maximum Number of Lines
+                    PropertyChanges {
+                        target: myBlurb
+                        maximumLineCount: 2
+                    }
+                    // Change it So that we Don't Draw on top of Everything Anymore
+                    PropertyChanges {
+                        target: rect;
+                        height: 200
+                        z: 1
+                    }
+                },
+                // Selected State:
+                //     Happens when the User Clicks on this Item
+                State {
+                    name: "selected"
+                    when: rect.GridView.isCurrentItem
+                    // Draw on Top of Everything and Make this Item Taller
+                    PropertyChanges {
+                        target: rect;
+                        // Make this Item Grow Vertically
+                        height: 300
+                        // Draw this Item on TOP of Everything Else
+                        z: 2
+                    }
+                    // Change the Maximum Number of Lines for the Program Blurb
+                    //     So we can Show More Information about the Program,
+                    //     and so we can Re-Elide(Is that correct?) the Text
+                    PropertyChanges {
+                        target: myBlurb
+                        maximumLineCount: 8
+                    }
+                    // Debug: For if you Want to Know when an App is Expanded
+                    //PropertyChanges {
+                    //    target: app;
+                    //    appToRun: appName;
+                    //}
+                }
+            ]
+            // Transitions to Re-Draw the Items That has it's Properties Changing
+            transitions: Transition {
+                // Animate the Height Growing and Shrinking
+                PropertyAnimation {
+                    target: rect
+                    properties: "height"
+                }
+                // Animate the Text Expanding and Contracting
+                PropertyAnimation {
                     target: myBlurb
-                    maximumLineCount: 2
+                    properties: "maximumLineCount"
                 }
-                // Change it So that we Don't Draw on top of Everything Anymore
-                PropertyChanges {
-                    target: rect;
-                    height: 200
-                    z: 1
-                }
-            },
-            // Selected State:
-            //     Happens when the User Clicks on this Item
-            State {
-                name: "selected"
-                when: rect.GridView.isCurrentItem
-                // Draw on Top of Everything and Make this Item Taller
-                PropertyChanges {
-                    target: rect;
-                    // Make this Item Grow Vertically
-                    height: 300
-                    // Draw this Item on TOP of Everything Else
-                    z: 2
-                }
-                // Change the Maximum Number of Lines for the Program Blurb
-                //     So we can Show More Information about the Program,
-                //     and so we can Re-Elide(Is that correct?) the Text
-                PropertyChanges {
-                    target: myBlurb
-                    maximumLineCount: 8
-                }
-                // Debug: For if you Want to Know when an App is Expanded
-                //PropertyChanges {
-                //    target: app;
-                //    appToRun: appName;
-                //}
             }
-        ]
-        // Transitions to Re-Draw the Items That has it's Properties Changing
-        transitions: Transition {
-            // Animate the Height Growing and Shrinking
-            PropertyAnimation {
-                target: rect
-                properties: "height"
-            }
-            // Animate the Text Expanding and Contracting
-            PropertyAnimation {
-                target: myBlurb
-                properties: "maximumLineCount"
-            }
-        }
-    }
-}
+        }// End of: StateGroup
+    }// End of: Rectangle - rect
+}// End of: ProgrammingDelegate

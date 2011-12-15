@@ -5,8 +5,10 @@ Rectangle {
     // Figure out a way to get this to auto-expand and contract as the
     //     User Maximizes/Minimizes/Re-Sizes the Application
     //width:  530; height: 650;
-    width:  600; height: 650;
+    //width:  600; height: 650;
+
     // Background Color, Border Color and Width
+    anchors.fill:  parent
     color: "lightsteelblue"; border.width: 5; border.color: "black"
     // Raspberry Pi Logo!!!!!!!! Love the Raspberry Pi!!!!
     Image {
@@ -27,10 +29,12 @@ Rectangle {
     // Tab Widget, Holds the Tab Pages in the Application
     TabWidget {
         // Put this Under the Raspberry Pi Logo, but Expand to the Entire Window Width
-        anchors.top: raspPiLogoImg.bottom;
-        anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
-        anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
-        anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
+//        anchors.top: raspPiLogoImg.bottom;
+//        anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
+//        anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
+//        anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
+        anchors.fill: parent
+
         // Quick Application Tab Page
         QuickAppTab {
             id: quickAppTab
@@ -40,7 +44,7 @@ Rectangle {
             // This is all of the Applications to be Shown on the Quick App Tab Page
             ListModel {
                 id: quickAppItemModel
-
+                // Firefox - To Web Link: http://raspberrypi.org/
                 ListElement {
                     // Background Color
                     colorName: "red"
@@ -106,9 +110,7 @@ Rectangle {
                     borderWidth: 1
                 }
             }// End of: quickAppItemModel
-
         }// End of: QuickAppTab
-
 
         // Programming Applications' Tab Page
         // We have to move out whatever needs to be changable to here
@@ -167,6 +169,7 @@ Rectangle {
                     borderColor: "black"
                     borderWidth: 1
                 }
+                // Eclipse IDE
                 ListElement {
                     colorName: "purple"
                     appTitle: "Eclipse [Java/C++]"
@@ -176,6 +179,7 @@ Rectangle {
                     borderColor: "black"
                     borderWidth: 1
                 }
+                // Qt Creator IDE
                 ListElement {
                     colorName: "lightgreen"
                     appTitle: "Qt Creator"
@@ -186,9 +190,7 @@ Rectangle {
                     borderWidth: 1
                 }
             }// End of: programmingItemModel
-
         }// End of: ProgrammingTab
-
 
         // Work Applications' Tab Page
         // Work App Tab Page
@@ -196,7 +198,7 @@ Rectangle {
             property string title: "Work Apps"
             ListModel {
                 id: workAppItemModel
-
+                // GEdit
                 ListElement {
                     colorName: "lightsteelblue"
                     appTitle: "GEdit"
@@ -207,6 +209,7 @@ Rectangle {
                     borderColor: "black"
                     borderWidth: 1
                 }
+                // GNOME Terminal
                 ListElement {
                     colorName: "green"
                     appTitle: "Gnome Terminal"
@@ -216,6 +219,7 @@ Rectangle {
                     borderColor: "black"
                     borderWidth: 1
                 }
+                // Firefox - No Args/Default Args
                 ListElement {
                     colorName: "orange"
                     appTitle: "Firefox"
@@ -224,14 +228,10 @@ Rectangle {
                     iconImg: "/usr/share/app-install/icons/firefox.png"
                     borderColor: "black"
                     borderWidth: 1
-
                 }
             }// End of: workAppItemModel
-
         }// End of: WorkAppTab
 
     }// End of: TabWidget
-
-
 }// End of: main.qml
 
