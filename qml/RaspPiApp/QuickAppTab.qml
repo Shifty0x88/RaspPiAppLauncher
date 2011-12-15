@@ -25,8 +25,8 @@ Rectangle  {
         GridView {
             id: quickAppGrid
             anchors.fill:  parent;
-            // Figure out a way to get the width and height of the item without hardcoding it
-            cellWidth: 175; cellHeight: 225; // width+25, height+25
+            // item will be: (cellWidth-25)x(cellHeight-25)
+            cellWidth: 175; cellHeight: 225;
 
             model: quickAppItemModel
             delegate: quickAppDelegate

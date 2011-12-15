@@ -6,8 +6,7 @@ Component {
     Rectangle {
         id: rect
 
-        width: 150
-        height: 200
+        width: workAppGrid.cellWidth - 25; height: workAppGrid.cellHeight - 25
         color: colorName
         border.color: borderColor
         border.width: borderWidth
@@ -45,7 +44,7 @@ Component {
         //    Size must be Less then the Width of this Grid Element (parent.width)
         Image {
             id: myIcon
-            width: 100; height: 100;
+            height: 100; width:  100;
             // Put this Under the Application Title Text and Centered
             anchors { top: myAppText.bottom; horizontalCenter: parent.horizontalCenter; margins: 10 }
             // Make Sure it Fits But that We
@@ -153,5 +152,6 @@ Component {
                 properties: "maximumLineCount"
             }
         }
-    }
-}
+
+    }// End of: Rectangle - rect
+}// End of: WorkAppDelegate

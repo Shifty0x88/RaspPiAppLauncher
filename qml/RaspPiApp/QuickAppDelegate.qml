@@ -2,14 +2,12 @@ import QtQuick 1.1
 
 // Our Delegate to the Grid
 Component {
-
     // This is Our Grid Item
     Rectangle {
         id: rect
 
         color: colorName
-        width: 150
-        height: 200
+        width: quickAppGrid.cellWidth - 25; height:  quickAppGrid.cellHeight - 25
         border.color: borderColor
         border.width: borderWidth
         // Font for the Text Blurb for Each Application
@@ -47,9 +45,10 @@ Component {
         //    Size must be Less then the Width of this Grid Element (parent.width)
         Image {
             id: myIcon
-            width: 100; height: 100;
             // Put this Under the Application Title Text and Centered
             anchors { top: myAppText.bottom; horizontalCenter: parent.horizontalCenter; margins: 10 }
+            // Make sure the Logo Fits inside the Grid Element
+            width: 100; height: 100;
             // Make Sure it Fits But that We
             fillMode: Image.PreserveAspectFit
             // Location of the Image
@@ -123,7 +122,7 @@ Component {
                 // Draw on Top of Everything and Make this Item Taller
                 PropertyChanges {
                     target: rect;
-                    // Make this Item Grow Vertically
+                    // Make this Item Grow Vertically to 300px
                     height: 300
                     // Draw this Item on TOP of Everything Else
                     z: 2
@@ -155,5 +154,6 @@ Component {
                 properties: "maximumLineCount"
             }
         }
-    }
-}
+
+    }// End of: Rectangle - rect
+}// End of: QuickAppDelegate

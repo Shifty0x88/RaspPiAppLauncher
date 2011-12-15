@@ -5,8 +5,7 @@ Component {
     // This is Our Grid Item
     Rectangle {
         id: rect
-        width: 150
-        height: 200
+        width: programmingGrid.cellWidth - 25; height:  programmingGrid.cellHeight - 25
         color: colorName
         border.color: borderColor
         border.width: borderWidth
@@ -47,9 +46,9 @@ Component {
         //    Size must be Less then the Width of this Grid Element (parent.width)
         Image {
             id: myIcon
-            width: 100; height: 100;
+            height: 100; width:  100;
             // Put this Under the Application Title Text and Centered
-            anchors { top: myAppText.bottom; horizontalCenter: parent.horizontalCenter; margins: 10 }
+            anchors { top: myAppText.bottom; horizontalCenter: parent.horizontalCenter; margins: 15 }
             // Make Sure it Fits But that We
             fillMode: Image.PreserveAspectFit
             // Location of the Image

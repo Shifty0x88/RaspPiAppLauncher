@@ -21,7 +21,8 @@ Rectangle  {
         }
         GridView {
             id: programmingGrid
-            cellWidth: 175; cellHeight: 250;
+            // item will be: (cellWidth-25)x(cellHeight-25)
+            cellWidth: 175; cellHeight: 225;
             anchors.fill: parent;
             anchors.horizontalCenter: parent.horizontalCenter
 
