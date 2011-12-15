@@ -61,7 +61,6 @@ Item {
 
     Row {
         id: header
-        anchors.horizontalCenter: parent.horizontalCenter
         Repeater {
             model: stack.children.length
             delegate: Rectangle {

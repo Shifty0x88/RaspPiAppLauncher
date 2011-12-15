@@ -2,7 +2,8 @@ import QtQuick 1.1
 
 Rectangle  {
     anchors.fill: parent
-        color: "#e3e3e3"
+    color: "#e3e3e3" // Make the Background Blend into the Tab Image
+
     Item {
         id: workAppContainer
         // Debug: Currently Expanded(Selected but Not Launched) Application
@@ -17,11 +18,11 @@ Rectangle  {
             anchors.fill: parent
             onClicked: workAppGrid.currentIndex = -1
         }
-
+        // Work App Delegate
         WorkAppDelegate {
             id: workAppDelegate
         }
-
+        // Work App Grid View
         GridView {
             id: workAppGrid
             anchors.fill:  parent;

@@ -87,7 +87,7 @@ Component {
             anchors.fill: parent
             // Change the Current Index Selected, so we can
             //     Expand the Description
-            onClicked: programmingGrid.currentIndex = index
+            onClicked: programmingGrid.currentIndex = index;
             // On Double Click, Launch the Application that the User
             //     Wants to Run
             onDoubleClicked: {

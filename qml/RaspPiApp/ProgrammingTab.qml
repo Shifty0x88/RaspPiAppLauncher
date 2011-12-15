@@ -2,7 +2,8 @@ import QtQuick 1.1
 
 Rectangle  {
     anchors.fill: parent
-    color: "#e3e3e3"
+    color: "#e3e3e3" // Make the Background Blend into the Tab Image
+
     Item {
         // Debug: Currently Expanded(Selected but Not Launched) Application
         property string appToRun:  "NoApp"
@@ -10,6 +11,7 @@ Rectangle  {
         //     and View More Information About.  Useful for Usage Statistics
         //onAppToRunChanged: console.debug("Program Selected: appToRun = " + appToRun);
         anchors.fill: parent;
+        anchors.horizontalCenter: parent.horizontalCenter
         // Handle Clicks on the Area that is Not Part of the Item
         //     Currently Selected
         MouseArea {
@@ -25,6 +27,7 @@ Rectangle  {
             cellWidth: 175; cellHeight: 225;
             anchors.fill: parent;
             anchors.horizontalCenter: parent.horizontalCenter
+            anchors.centerIn: parent
 
             model: programmingItemModel
             delegate: programmingDelegate

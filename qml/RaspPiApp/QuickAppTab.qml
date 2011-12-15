@@ -2,7 +2,8 @@ import QtQuick 1.1
 
 Rectangle  {
     anchors.fill: parent
-    color: "#e3e3e3"
+    color: "#e3e3e3" // Make the Background Blend into the Tab Image
+
     Item {
         id: quickAppContainer
         // Debug: Currently Expanded(Selected but Not Launched) Application

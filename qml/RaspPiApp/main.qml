@@ -6,7 +6,6 @@ Rectangle {
     //     User Maximizes/Minimizes/Re-Sizes the Application
     //width:  530; height: 650;
     width:  600; height: 650;
-
     // Background Color, Border Color and Width
     anchors.fill:  parent
     color: "lightsteelblue"; border.width: 5; border.color: "black"
@@ -33,6 +32,8 @@ Rectangle {
         anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
         anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
         anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
+
+
 
         // Quick Application Tab Page
         QuickAppTab {
