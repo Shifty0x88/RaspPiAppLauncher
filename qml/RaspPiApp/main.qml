@@ -31,10 +31,8 @@ Rectangle {
         anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
         anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
 
-        Rectangle  {
+        TabPage  {
             property string title: "Quick Start Apps"
-            anchors.fill: parent
-            color: "#e3e3e3"
 
             // Quick Applications' Tab Page
             // We have to move out whatever needs to be changable to here
@@ -112,10 +110,8 @@ Rectangle {
             }// End of: QuickAppTab
         } // End of: QuickAppTab Holder
 
-        Rectangle  {
-            property string title: "Programming"
-            anchors.fill: parent
-            color: "#e3e3e3"
+       TabPage {
+           property string title: "Programming"
 
             // Programming Applications' Tab Page
             // We have to move out whatever needs to be changable to here
@@ -187,10 +183,9 @@ Rectangle {
             }// End of: ProgrammingTab
         } // End of: ProgrammingTab Holder
 
-        Rectangle  {
+        TabPage  {
             property string title: "Work Apps"
-            anchors.fill: parent
-            color: "#e3e3e3"
+
             // Work Applications' Tab Page
             // Work App Tab Page
             WorkAppTab {
