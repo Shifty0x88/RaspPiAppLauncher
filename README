@@ -23,7 +23,8 @@ Notes about Limitations of the Software in it's Current State:
     4. Paths to Icons are Hardcoded to Ubuntu 11.10 on x86. Will
        Change to Default Location and Images on Release
     5. Text blurb can and will get cut off if it cannot fit height-wise
-    6. There's more but I can't think of it
+    6. Title will Just Bleed Over the Edges if it is Too Long!
+    7. There's more but I can't think of it
 
 
 Notes about the Future:
