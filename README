@@ -15,7 +15,7 @@ Suggestion: When an Application Fails to Launch Suppress
 
 Notes about Limitations of the Software in it's Current State:
     1. Can only Run 1 Application before Freezing RaspPiApp
-       due to procExec.h only have 1 QProcess
+       due to procExec.h only have 1 QProcess Object
     2. Re-Sizing Gets Messed Up. I have to Investigate this, and
        Setting Up the main.qml to Take up All of the Window Size
     3. I'm not happy with the code layout, but QML makes it
