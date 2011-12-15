@@ -164,7 +164,7 @@ Rectangle {
                         appTitle: "Geany [Python]"
                         appName: "geany"
                         blurb: "Geany Python IDE.\n  Python Interpreter. Official Language of the Raspberry Pi"
-                        // Somehow I have the icon but no program, hah!
+                        // Somehow I have the icon but not the program, hah!
                         iconImg: "/usr/share/app-install/icons/geany.png"
                         borderColor: "black"
                         borderWidth: 1
@@ -182,7 +182,7 @@ Rectangle {
                         colorName: "lightgreen"
                         appTitle: "Qt Creator"
                         appName: "qtcreator"
-                        blurb: "Qt Creator.\n\nCreate an App Like this One"
+                        blurb: "Qt Creator.\n\nCreate an App Like this One! =D"
                         iconImg: "/usr/share/app-install/icons/qtcreator.png"
                         borderColor: "black"
                         borderWidth: 1
