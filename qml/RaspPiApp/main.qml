@@ -2,7 +2,7 @@
  *                                                                *
  * Raspberry Pi Qt Quick Application Launcher                     *
  *     Presents the User with a Tabbed Window View which Holds    *
- *     Grids of Application to Launch on the System.              *
+ *     Grids of Applications to Launch on the System.             *
  *                                                                *
  * See README for More Information about the Limitations/Future   *
  *                                                                *
