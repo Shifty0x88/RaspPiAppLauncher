@@ -7,7 +7,6 @@ Rectangle {
     width:  700; height: 700;
     // Background Color, Border Color and Width
     color: "lightsteelblue"; border.width: 5; border.color: "black"
-
     // Raspberry Pi Logo!!!!!!!! Love the Raspberry Pi!!!!
     Image {
         id: raspPiLogoImg
@@ -23,7 +22,6 @@ Rectangle {
         x: 60; y: 20;
         text: "Raspberry Pi Application Launcher"
     }
-
     // Holds the TabWidget and the Tabs that are contained within it
     TabWidgetHolder {
         id: tabWidget
