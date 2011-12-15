@@ -11,7 +11,7 @@ Rectangle {
     Image {
         id: raspPiLogoImg
         width: 45; height: 45; x: 0; y: 5;
-        // High Quality Raspberry Pi Only Thank You Very Much!!
+        // Yey! For Transparent Background Icon Image!! Thank to Liam! =D
         source: "image/RaspPi_PNG45x40.png"
         fillMode: Image.PreserveAspectFit
     }
