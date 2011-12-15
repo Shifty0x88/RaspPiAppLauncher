@@ -18,7 +18,9 @@ Notes about Limitations of the Software in it's Current State:
        due to procExec.h only have 1 QProcess
     2. Re-Sizing Gets Messed Up. I have to Investigate this, and
        Setting Up the main.qml to Take up All of the Window Size
-    3. There's more but I can't think of it
+    3. I'm not happy with the code layout, but QML makes it
+       pretty cut and paste to fix that! =D (Sorry, Couldn't Resist!)
+    4. There's more but I can't think of it
 
 
 Notes about the Future:
@@ -28,4 +30,11 @@ Notes about the Future:
        rewrite it using basic linux sys calls. QProcess is just
        an abstraction. I'm assuming it will exist since we are
        suppose to get Qt5 for the RaspberryPi.
-    3. There's more but I can't think of it
+    3. Investigate about how QProcess assigns arguments since I
+       don't pass any as far as their API should be concerned
+       however they are still running when called simply because
+       they are in the "program name" part of their API. I'm
+       thinking it is just a string append and it doesn't matter.
+    4. Fix the Code Layout, and Investigate Common/Best Coding
+       Practices for that (I'm a newbie at Qt/QML, not C++)
+    5. There's more but I can't think of it
