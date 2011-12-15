@@ -26,8 +26,6 @@ Rectangle  {
             // item will be: (cellWidth-25)x(cellHeight-25)
             cellWidth: 175; cellHeight: 225;
             anchors.fill: parent;
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.centerIn: parent
 
             model: programmingItemModel
             delegate: programmingDelegate
