@@ -83,7 +83,7 @@ Rectangle {
                         appTitle: "Gnome Terminal"
                         appName: "gnome-terminal"
                         blurb: "Simple GUI Shell.\n Great for command-line uses"
-                        iconImg: "image/RaspPi_PNG90x80.png"
+                        iconImg: "/usr/share/app-install/terminal-tango.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
@@ -103,7 +103,7 @@ Rectangle {
                         appTitle: "Firefox"
                         appName: "firefox"
                         blurb: "Firefox Web Browser.\n Helps you get the information you want, when you want it. From the Mozilla Firefox Team!"
-                        iconImg: "image/qt-logo.png"
+                        iconImg: "/usr/share/app-install/icons/firefox.png"
                         borderColor: "blue"
                         borderWidth: 1
                     }
@@ -168,7 +168,8 @@ Rectangle {
                         appTitle: "Geany [Python]"
                         appName: "geany"
                         blurb: "Geany Python IDE.\n  Python Interpreter. Official Language of the Raspberry Pi"
-                        iconImg: "image/qt-logo.png"
+                        // Somehow I have the icon but no program, hah!
+                        iconImg: "/usr/share/app-install/icons/geany.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
@@ -177,7 +178,7 @@ Rectangle {
                         appTitle: "Eclipse [Java/C++]"
                         appName: "eclipse"
                         blurb: "Eclipse IDE.\n  Java and C++ Compiler."
-                        iconImg: "image/qt-logo.png"
+                        iconImg: "/usr/share/app-install/icons/eclipse.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
@@ -201,19 +202,29 @@ Rectangle {
                         appTitle: "Gedit"
                         // This is what actually gets launched:
                         appName: "gedit"
-                        blurb: "Simple GUI Text Editor.\n GEdit is a lightweight Text Editor"
+                        blurb: "Simple GUI Text Editor\n\n GEdit is a lightweight Text Editor"
                         iconImg: "image/RaspPi_PNG90x80.png"
                         borderColor: "black"
                         borderWidth: 1
                     }
                     ListElement {
-                        colorName: "red"
+                        colorName: "green"
                         appTitle: "Gnome Terminal"
                         appName: "gnome-terminal"
-                        blurb: "Simple GUI Shell.\n Great for command-line uses"
-                        iconImg: "image/RaspPi_PNG90x80.png"
+                        blurb: "Simple GUI Shell\n\n Great for command-line uses"
+                        iconImg: "/usr/share/app-install/terminal-tango.png"
                         borderColor: "black"
                         borderWidth: 1
+                    }
+                    ListElement {
+                        colorName: "orange"
+                        appTitle: "Firefox"
+                        appName: "firefox"
+                        blurb: "Mozilla Firefox\n\n Firefox!"
+                        iconImg: "/usr/share/app-install/icons/firefox.png"
+                        borderColor: "black"
+                        borderWidth: 1
+
                     }
                 }// End of: workAppItemModel
 
