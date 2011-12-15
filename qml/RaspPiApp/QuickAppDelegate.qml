@@ -35,12 +35,13 @@ Component {
             anchors { top: parent.top; horizontalCenter: parent.horizontalCenter; margins: 10 }
             text: appTitle
         }
+        // Keep around the application name and any arguments to run
+        //     This is called on double-click of the menu item
         Text{
             id: appNameText
             text: appName
             visible: false
         }
-
         // Application Icon Image
         //    Size must be Less then the Width of this Grid Element (parent.width)
         Image {
@@ -141,6 +142,8 @@ Component {
                 //}
             }
         ]
+        // Might need to remove theses for the RaspberryPi. Will know if
+        //     if it can Handle it when I get it
         // Transitions to Re-Draw the Items That has it's Properties Changing
         transitions: Transition {
             // Animate the Height Growing and Shrinking

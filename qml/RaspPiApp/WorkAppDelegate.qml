@@ -34,12 +34,13 @@ Component {
             anchors { top: parent.top; horizontalCenter: parent.horizontalCenter; margins: 10 }
             text: appTitle
         }
+        // Keep around the application name and any arguments to run
+        //     This is called on double-click of the menu item
         Text{
             id: appNameText
             text: appName
             visible: false
         }
-
         // Application Icon Image
         //    Size must be Less then the Width of this Grid Element (parent.width)
         Image {

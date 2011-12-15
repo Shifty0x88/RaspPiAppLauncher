@@ -4,7 +4,8 @@ Rectangle {
     id: root
     // Figure out a way to get this to auto-expand and contract as the
     //     User Maximizes/Minimizes/Re-Sizes the Application
-    width:  530; height: 650;
+    //width:  530; height: 650;
+    width:  600; height: 650;
     // Background Color, Border Color and Width
     color: "lightsteelblue"; border.width: 5; border.color: "black"
     // Raspberry Pi Logo!!!!!!!! Love the Raspberry Pi!!!!
