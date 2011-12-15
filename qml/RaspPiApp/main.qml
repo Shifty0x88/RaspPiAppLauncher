@@ -20,7 +20,7 @@ Rectangle {
     Text {
         id: titleText
         font.family: "Courier"; font.pointSize: 16;
-        x: 60; y: 20;
+        x: 50; y: 18;
         text: "Raspberry Pi Application Launcher"
     }
     // Holds the TabWidget and the Tabs that are contained within it
