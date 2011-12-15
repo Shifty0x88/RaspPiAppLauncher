@@ -178,6 +178,15 @@ Rectangle {
                         borderColor: "black"
                         borderWidth: 1
                     }
+                    ListElement {
+                        colorName: "lightgreen"
+                        appTitle: "Qt Creator"
+                        appName: "qtcreator"
+                        blurb: "Qt Creator.\n\nCreate an App Like this One"
+                        iconImg: "/usr/share/app-install/icons/qtcreator.png"
+                        borderColor: "black"
+                        borderWidth: 1
+                    }
                 }// End of: programmingItemModel
 
             }// End of: ProgrammingTab
