@@ -18,9 +18,11 @@ Rectangle  {
             anchors.fill: parent
             onClicked: programmingGrid.currentIndex = -1
         }
+        // Programming Delegate to the Grid View
         ProgrammingDelegate {
             id: programmingDelegate
         }
+        // Programming Grid View
         GridView {
             id: programmingGrid
             // item will be: (cellWidth-25)x(cellHeight-25)

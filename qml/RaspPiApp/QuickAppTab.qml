@@ -20,9 +20,11 @@ Rectangle  {
             anchors.fill: parent
             onClicked: quickAppGrid.currentIndex = -1
         }
+        // Quick App Delegate to the Grid View
         QuickAppDelegate {
             id: quickAppDelegate
         }
+        // Quick App Grid View
         GridView {
             id: quickAppGrid
             anchors.fill:  parent;

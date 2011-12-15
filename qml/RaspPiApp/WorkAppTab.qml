@@ -18,7 +18,7 @@ Rectangle  {
             anchors.fill: parent
             onClicked: workAppGrid.currentIndex = -1
         }
-        // Work App Delegate
+        // Work App Delegate to the Grid View
         WorkAppDelegate {
             id: workAppDelegate
         }
