@@ -24,7 +24,8 @@ Notes about Limitations of the Software in it's Current State:
        Change to Default Location and Images on Release
     5. Text blurb can and will get cut off if it cannot fit height-wise
     6. Title will Just Bleed Over the Edges if it is Too Long!
-    7. There's more but I can't think of it
+    7. Grid is not Centered within the Tab Page
+    8. There's more but I can't think of it
 
 
 Notes about the Future:
