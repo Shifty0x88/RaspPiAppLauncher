@@ -5,7 +5,7 @@ Rectangle {
     // Figure out a way to get this to auto-expand and contract as the
     //     User Maximizes/Minimizes/Re-Sizes the Application
     //width:  530; height: 650;
-    //width:  600; height: 650;
+    width:  600; height: 650;
 
     // Background Color, Border Color and Width
     anchors.fill:  parent
@@ -29,11 +29,10 @@ Rectangle {
     // Tab Widget, Holds the Tab Pages in the Application
     TabWidget {
         // Put this Under the Raspberry Pi Logo, but Expand to the Entire Window Width
-//        anchors.top: raspPiLogoImg.bottom;
-//        anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
-//        anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
-//        anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
-        anchors.fill: parent
+        anchors.top: raspPiLogoImg.bottom;
+        anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
+        anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
+        anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
 
         // Quick Application Tab Page
         QuickAppTab {
