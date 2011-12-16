@@ -7,7 +7,9 @@ Component {
         id: rect
 
         color: colorName
-        width: quickAppGrid.cellWidth - 25; height:  quickAppGrid.cellHeight - 25
+        width: quickAppGrid.cellWidth - 25;
+        height:  quickAppGrid.cellHeight - 25
+
         border.color: borderColor
         border.width: borderWidth
         // Font for the Text Blurb for Each Application
@@ -32,7 +34,8 @@ Component {
             id: myAppText
             font.family:  "Courier"
             font.pixelSize: 13;
-            anchors { top: parent.top; horizontalCenter: parent.horizontalCenter; margins: 10 }
+            anchors { top: parent.top; margins: 10;
+                      horizontalCenter: parent.horizontalCenter; }
             text: appTitle
         }
         // Keep around the application name and any arguments to run
@@ -47,7 +50,8 @@ Component {
         Image {
             id: myIcon
             // Put this Under the Application Title Text and Centered
-            anchors { top: myAppText.bottom; horizontalCenter: parent.horizontalCenter; margins: 10 }
+            anchors { top: myAppText.bottom; margins: 10;
+                      horizontalCenter: parent.horizontalCenter; }
             // Make sure the Logo Fits inside the Grid Element
             width: 100; height: 100;
             // Make Sure it Fits But that We
@@ -64,7 +68,8 @@ Component {
             font.family: blurbFont.name;
             font.pixelSize: 15;
             // Put this Under the Icon, and Centered
-            anchors { top: myIcon.bottom; horizontalCenter: parent.horizontalCenter; margins: 15 }
+            anchors { top: myIcon.bottom; margins: 15;
+                      horizontalCenter: parent.horizontalCenter; }
             // Set the Width to this Element's Width
             width: parent.width - anchors.margins.valueOf();
             // Justify the Text

@@ -65,18 +65,20 @@ Item {
             model: stack.children.length
             delegate: Rectangle {
                 width: tabWidget.width / stack.children.length; height: 36
-
+                // 1-Pixel Line on Top of Each Tab Page
                 Rectangle {
                     width: parent.width; height: 1
                     anchors { bottom: parent.bottom; bottomMargin: 1 }
                     color: "#acb2c2"
                 }
+                // Tab On the Top of Selected Tab
                 BorderImage {
                     anchors { fill: parent; leftMargin: 2; topMargin: 5; rightMargin: 1 }
                     border { left: 7; right: 7 }
                     source: "image/tab.png"
                     visible: tabWidget.current == index
                 }
+                // Tab Title Text
                 Text {
                     horizontalAlignment: Qt.AlignHCenter; verticalAlignment: Qt.AlignVCenter
                     anchors.fill: parent
@@ -84,6 +86,7 @@ Item {
                     elide: Text.ElideRight
                     font.bold: tabWidget.current == index
                 }
+                // Tab Selector
                 MouseArea {
                     anchors.fill: parent
                     onClicked: tabWidget.current = index

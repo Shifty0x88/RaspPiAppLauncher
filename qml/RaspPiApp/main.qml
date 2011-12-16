@@ -43,9 +43,9 @@ Rectangle {
         // Put this Under the Raspberry Pi Logo, but Expand to the Entire Window Width
         //     and What is Left of the Window Height
         anchors.top: raspPiLogoImg.bottom;
-        anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width / 2
-        anchors.left: parent.left; anchors.leftMargin: parent.border.width / 2
-        anchors.right:  parent.right; anchors.rightMargin: parent.border.width / 2
+        anchors.bottom: parent.bottom; anchors.bottomMargin: parent.border.width
+        anchors.left: parent.left; anchors.leftMargin: parent.border.width
+        anchors.right:  parent.right; anchors.rightMargin: parent.border.width
 
         // Quick Application Tab Page
         QuickAppTab {

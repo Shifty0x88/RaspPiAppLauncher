@@ -3,7 +3,8 @@ import QtQuick 1.1
 Rectangle  {
     anchors.fill: parent
     color: "#e3e3e3" // Make the Background Blend into the Tab Image
-
+anchors.horizontalCenter: parent.horizontalCenter
+anchors.centerIn: parent
     Item {
         // Debug: Currently Expanded(Selected but Not Launched) Application
         property string appToRun:  "NoApp"
@@ -18,10 +19,6 @@ Rectangle  {
             anchors.fill: parent
             onClicked: programmingGrid.currentIndex = -1
         }
-        // Programming Delegate to the Grid View
-        ProgrammingDelegate {
-            id: programmingDelegate
-        }
         // Programming Grid View
         GridView {
             id: programmingGrid
@@ -30,7 +27,10 @@ Rectangle  {
             anchors.fill: parent;
 
             model: programmingItemModel
-            delegate: programmingDelegate
+            // Programming Delegate to the Grid View
+            delegate: ProgrammingDelegate {
+                          id: programmingDelegate
+                      }
             // handle clicks on empty area within the grid.
             // this adds an element below the grid items but on the grid's flickable surface
             //     (so it won't have mouse events stolen by the grid)

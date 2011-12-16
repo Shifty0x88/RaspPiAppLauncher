@@ -3,6 +3,7 @@ import QtQuick 1.1
 // Our Delegate to the Grid
 Component {
     // This is Our Grid Item
+
     Rectangle {
         id: rect
         width: programmingGrid.cellWidth - 25; height:  programmingGrid.cellHeight - 25
