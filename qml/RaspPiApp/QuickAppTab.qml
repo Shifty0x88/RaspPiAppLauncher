@@ -43,6 +43,7 @@ Rectangle  {
             // sets the initial index to -1, so no item is selected
             //        currentIndex: -1 // not enough, need to check later
             Component.onCompleted: currentIndex = -1
+            focus: true
         }// End of: GridView - quickAppGrid
     }// End of: Item - quickAppContainer
 }// End of: QuickAppTab

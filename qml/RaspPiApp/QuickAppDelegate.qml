@@ -100,6 +100,9 @@ Component {
                 processExecute.RunSimpleProcess(appName);
             }
         }
+        // So Apparently I Should Never Put the State in a Delegate because
+        //     the Delegate can be Created and Destroyed at any Time, but
+        //     It works for now
         StateGroup {
             // States of this Item:
             //     Keeps Track if this Item has Been Selected By

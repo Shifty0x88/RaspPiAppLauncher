@@ -41,6 +41,7 @@ anchors.centerIn: parent
             // sets the initial index to -1, so no item is selected
             //        currentIndex: -1 // not enough, need to check later
             Component.onCompleted: currentIndex = -1
+            //focus: true
         }// End of: GridView
     }// End of: Item
 }// End of: ProgrammingTab
