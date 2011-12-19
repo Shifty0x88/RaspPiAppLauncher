@@ -18,7 +18,7 @@ public:
      * TODO:
      *     does not solve naming conflicts
      *     only allows one process per object
-     *     can I let QPRocess to die?!?
+     *     can I let QPRocess die?!?
      *
      */
     Q_INVOKABLE  void RunSimpleProcess( const QString &procName ) {
