@@ -51,7 +51,7 @@ Rectangle {
         QuickAppTab {
             id: quickAppTab
             property string title: "Quick Start Apps"
-
+            //anchors.centerIn: parent;
             // This is all of the Applications to be Shown on the
             //     Quick App Tab Page
             ListModel {
@@ -129,6 +129,7 @@ Rectangle {
         ProgrammingTab {
             id: programmingTab
             property string title: "Programming"
+            //anchors.fill: parent;  anchors.centerIn: parent;
 
             // This is the Items that we Want to Display
             //     on the Programming Tab Page

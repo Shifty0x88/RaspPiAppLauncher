@@ -3,6 +3,7 @@ import QtQuick 1.1
 Rectangle  {
     anchors.fill: parent
     color: "#e3e3e3" // Make the Background Blend into the Tab Image
+    anchors.centerIn: parent;
 
     Item {
         id: quickAppContainer
@@ -12,7 +13,7 @@ Rectangle  {
         //     and View More Information About.  Useful for Usage Statistics
         //onAppToRunChanged: console.debug("Program Selected: appToRun = " + appToRun);
         anchors.left: parent.left; anchors.right: parent.right;
-        anchors.leftMargin: 30; anchors.rightMargin: 30;
+        anchors.leftMargin: 35;
         anchors.top: parent.top; anchors.bottom: parent.bottom;
         // Handle Clicks on the Area that is Not Part of the Item
         //     Currently Selected

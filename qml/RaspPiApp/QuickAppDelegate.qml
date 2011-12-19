@@ -7,11 +7,8 @@ Component {
         id: rect
 
         color: colorName
-        width: quickAppGrid.cellWidth - 25;
-        height:  quickAppGrid.cellHeight - 25
-
-        border.color: borderColor
-        border.width: borderWidth
+        width: quickAppGrid.cellWidth - 25;  height:  quickAppGrid.cellHeight - 25
+        border.color: borderColor;           border.width: borderWidth
         // Font for the Text Blurb for Each Application
         //     Number of Lines of Text Increases if the User Clicks on
         //     that individual Application.

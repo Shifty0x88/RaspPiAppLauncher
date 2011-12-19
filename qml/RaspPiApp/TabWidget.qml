@@ -98,6 +98,7 @@ Item {
     Item {
         id: stack
         width: tabWidget.width
+        //anchors.fill: parent;
         anchors.top: header.bottom; anchors.bottom: tabWidget.bottom
     }
 }
